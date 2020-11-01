@@ -117,10 +117,16 @@ public class MainActivity extends AppCompatActivity {
 
         String timeLeftText;
 
-        if (minutes < 10) timeLeftText = "0" + minutes;
-        else timeLeftText = "" + minutes;
+        if (minutes < 10)
+            timeLeftText = "0" + minutes;
+        else
+            timeLeftText = "" + minutes;
+
         timeLeftText += ":";
-        if (seconds < 10) timeLeftText += "0";
+
+        if (seconds < 10)
+            timeLeftText += "0";
+
         timeLeftText += seconds;
 
         StringBuilder returnString = new StringBuilder(timeLeftText);
