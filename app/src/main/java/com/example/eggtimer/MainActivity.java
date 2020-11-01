@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     CountDownTimer cdTimer;
     long timeLeft = 600000;
     TextView timerText;
-    Button startBtn;
+    Button startBtn, softBtn, smileBtn, hardBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button softBtn = (Button) findViewById(R.id.buttonSoft);
+        softBtn = (Button) findViewById(R.id.buttonSoft);
         softBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button smileBtn = (Button) findViewById(R.id.buttonSmile);
+        smileBtn = (Button) findViewById(R.id.buttonSmile);
         smileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button hardBtn = (Button) findViewById(R.id.buttonHard);
+        hardBtn = (Button) findViewById(R.id.buttonHard);
         hardBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
         }.start();
 
 
+        softBtn.setEnabled(false);
+        smileBtn.setEnabled(false);
+        hardBtn.setEnabled(false);
         startBtn.setText("Stop");
         timeIsRunning = true;
     }
@@ -103,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
         cdTimer.cancel();
         timeIsRunning = false;
         startBtn.setText("Start");
+        softBtn.setEnabled(true);
+        smileBtn.setEnabled(true);
+        hardBtn.setEnabled(true);
     }
 
     String UpdateTimer(long timeLeft){
