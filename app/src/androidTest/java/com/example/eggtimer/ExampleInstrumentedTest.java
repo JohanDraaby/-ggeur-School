@@ -1,4 +1,4 @@
-package com.example.ggeuret;
+package com.example.eggtimer;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.ggeuret", appContext.getPackageName());
+        assertEquals("com.example.eggtimer", appContext.getPackageName());
     }
 }

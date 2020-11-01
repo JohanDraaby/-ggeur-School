@@ -1,4 +1,4 @@
-package com.example.ggeuret;
+package com.example.eggtimer;
 
 import org.junit.Test;
 
